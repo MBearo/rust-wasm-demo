@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script src="./test_rust.js"></script> -->
+    <script type="module">
+        import init, { string_to_md5 } from './pkg/test_rust.js';
+        async function run() {
+            await init();
+            console.log('from rust md5:',string_to_md5('Hello, World!'))
+        }
+        run();
+    </script>
+
+</body>
+
+</html>
